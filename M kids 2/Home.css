@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Align logo to the left and nav to the right */
+    align-items: center; /* Vertically center elements */
+    padding: 10px 20px;
+    background: #a7c7e7; /* Light blue background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+nav {
+    margin-left: auto; /* Push navigation menu to the far right */
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Align items horizontally */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px; /* Add spacing between menu items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+nav ul li a.active {
+    color: #569dd3; /* Highlight active link */
+}
+
+nav ul li a:hover {
+    color: #569dd3; /* Change color on hover */
+}
+
+/* Slider Styles */
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem; /* Set a fixed maximum width for the slider */
+    margin: 20px auto;
+    overflow: hidden; /* Hide overflowing slides */
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth slide transition */
+}
+
+.slider img {
+    flex: 0 0 100%;
+    object-fit: cover; /* Make images cover the full width */
+}
+
+.slider-nav {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav .dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.slider-nav .dot.active {
+    opacity: 1;
+}
+
+.slider-nav .dot:hover {
+    opacity: 1;
+}
+
+/* Main Section Styles */
+main {
+    padding: 20px;
+}
+
+.welcome, .vision-mission {
+    margin-bottom: 20px;
+    text-align: center; /* Center align text for sections */
+}
+
+h1, h2, h3 {
+    color: #f36b6b; /* Light red for headings */
+    text-align: center;
+}
+p{
+    
+        font-style: oblique;
+      
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #a7c7e7; /* Match the header background */
+    color: #333;
+    position: fixed; /* Fix footer to the bottom */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align to the left */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation links */
+        align-items: flex-start; /* Align links to the left */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add spacing between stacked items */
+    }
+
+    .slider-wrapper {
+        max-width: 100%; /* Ensure slider fits smaller screens */
+    }
+}
